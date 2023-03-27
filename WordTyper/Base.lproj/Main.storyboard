@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="85" id="1Kt-v9-VpG"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Word Typer">
+                                    <fragment content="No Word">
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -31,29 +31,32 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kI5-kI-DrW">
-                                <rect key="frame" x="142" y="409" width="109" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-YY-3V6">
+                                <rect key="frame" x="125" y="334" width="143" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Ct8-mg-uMs"/>
+                                    <constraint firstAttribute="height" constant="34" id="HIZ-ap-qwz"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Easy Game"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <segue destination="Ywn-91-VgE" kind="show" id="9JE-7s-OMe"/>
+                                    <action selector="gamePlayEnterText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="MET-80-rLg"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MpK-YY-3V6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="GF5-ov-fwG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bps-dh-cxg" secondAttribute="trailing" constant="102" id="HeN-Yd-3Tt"/>
-                            <constraint firstItem="kI5-kI-DrW" firstAttribute="top" secondItem="Bps-dh-cxg" secondAttribute="bottom" constant="176" id="c69-ma-Nvo"/>
                             <constraint firstItem="Bps-dh-cxg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="gLE-uv-8AW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kI5-kI-DrW" secondAttribute="trailing" constant="142" id="psT-3W-6um"/>
-                            <constraint firstItem="kI5-kI-DrW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="rZZ-IO-y7c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MpK-YY-3V6" secondAttribute="trailing" constant="125" id="kbd-bH-wgG"/>
                             <constraint firstItem="Bps-dh-cxg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="v14-1K-XK6"/>
+                            <constraint firstItem="MpK-YY-3V6" firstAttribute="top" secondItem="Bps-dh-cxg" secondAttribute="bottom" constant="101" id="vNj-nX-rSe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gamePlayWordLabel" destination="Bps-dh-cxg" id="GHq-KP-FNk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,6 +78,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB5-vf-5pk">
+                                <rect key="frame" x="102" y="183" width="188" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tP6-Tx-RPO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
