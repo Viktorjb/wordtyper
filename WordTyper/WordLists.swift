@@ -12,5 +12,14 @@ class WordLists {
     private let easyList = ["crab", "cheese", "rocket", "hair"]
     private let hardList = ["shortcut", "preferences", "chocolate", "desktop", "cognitive"]
     
+    private var gameList : [String] = []
+    
+    func setUpEasyGame(){
+        gameList = easyList
+    }
+    
+    func setUpHardGame(){
+        gameList = hardList
+    }
 }
 
