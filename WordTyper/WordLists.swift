@@ -17,14 +17,48 @@ class WordLists {
     //gameList, to be used when a game is active
     private var gameList : [String] = []
     
-    //Fill up the gamelist with the easy words
+    //for counting points as the game is running
+    private var points : Int = 0
+    
+    //Fill up the gamelist with the easy words, and reset points
     func setUpEasyGame(){
-        gameList = easyList
+        points = 0
+        gameList = easyList.shuffled()
     }
     
-    //Fill up the gamelist with the hard words
+    //Fill up the gamelist with the hard words, and reset points
     func setUpHardGame(){
-        gameList = hardList
+        points = 0
+        gameList = hardList.shuffled()
+    }
+    
+    //return the top word (if there is one)
+    func getTopWord() -> String?{
+        if (gameList.isEmpty){
+            return nil
+        } else{
+            return gameList.first
+        }
+    }
+    
+    //remove the top word (if there is one)
+    func removeTopWord(){
+        if (gameList.isEmpty){
+            return
+        } else{
+            gameList.removeFirst()
+        }
+    }
+    
+    //is the gamelist empty?
+    func isGameListEmpty() -> Bool{
+        return gameList.isEmpty
+    }
+    
+    func gameOver(){
+        //run when either timer runs out or gameList gets empty
+        //if points is higher than the record in userdefaults, set as new record
+        //return stuff to let the view know to go to results page (and populate it?)
     }
 }
 
