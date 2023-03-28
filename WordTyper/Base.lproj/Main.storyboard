@@ -40,6 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="gamePlayEnterText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="MET-80-rLg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rJ7-bm-NRV"/>
                                 </connections>
                             </textField>
                         </subviews>

@@ -7,10 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
-    
-    
+    let model = WordLists()
     
     @IBOutlet weak var gamePlayWordLabel: UILabel!
     
@@ -19,12 +18,16 @@ class ViewController: UIViewController {
         
     }
     
-
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print(textField.text)
+        print(string)
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let model = WordLists()
         model.setUpHardGame()
         gamePlayWordLabel.text = model.getTopWord()
         
