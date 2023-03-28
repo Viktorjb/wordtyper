@@ -19,8 +19,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print(textField.text)
+        //print(textField.text)
         print(string)
+        let fullString = model.typeCharacter(s: string)
+        if(fullString == model.getTopWord()){
+            model.removeTopWord()
+            model.clearCurrentString()
+            gamePlayWordLabel.text = model.getTopWord()
+        }
         return true
     }
     

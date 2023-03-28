@@ -17,6 +17,9 @@ class WordLists {
     //gameList, to be used when a game is active
     private var gameList : [String] = []
     
+    //currently typed string
+    private var currentString : String = ""
+    
     //for counting points as the game is running
     private var points : Int = 0
     
@@ -30,6 +33,17 @@ class WordLists {
     func setUpHardGame(){
         points = 0
         gameList = hardList.shuffled()
+    }
+    
+    //Add a character (or substring) to the current string, get the full string back
+    func typeCharacter(s: String) -> String{
+        currentString = currentString + s
+        return currentString
+    }
+    
+    //clear the current string
+    func clearCurrentString(){
+        currentString = ""
     }
     
     //return the top word (if there is one)
