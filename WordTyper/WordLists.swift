@@ -46,6 +46,17 @@ class WordLists {
         currentString = ""
     }
     
+    //check if the currently typed string has been mistyped
+    func checkTypo() -> Bool{
+        if (gameList.isEmpty){
+            return false
+        } else if(gameList.first?.prefix(currentString.count) ?? "" != currentString){
+            return true
+        } else{
+            return false
+        }
+    }
+    
     //return the top word (if there is one)
     func getTopWord() -> String?{
         if (gameList.isEmpty){

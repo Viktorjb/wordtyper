@@ -26,6 +26,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             model.removeTopWord()
             model.clearCurrentString()
             gamePlayWordLabel.text = model.getTopWord()
+            textField.text = ""
+            return false
+        }
+        if(model.checkTypo()){
+            print("MISTAAAAAKE")
+            model.clearCurrentString()
+            textField.text = ""
+            return false
         }
         return true
     }
