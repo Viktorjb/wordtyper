@@ -12,7 +12,8 @@ class WordLists {
     
     //Word lists
     private let easyList = ["crab", "cheese", "rocket", "hair"]
-    private let hardList = ["shortcut", "preferences", "chocolate", "desktop", "cognitive"]
+    private let hardList = ["shortcut", "preferences", "chocolate", "desktop", "cognitive",
+    "gargantuan", "explosion", "everlasting", "wallpaper", "mountain", "samurai"]
     
     //gameList, to be used when a game is active
     private var gameList : [String] = []
@@ -22,6 +23,16 @@ class WordLists {
     
     //for counting points as the game is running
     private var points : Int = 0
+    
+    //Returns points
+    func getPoints() -> Int{
+        return points
+    }
+    
+    //Change the amount of points
+    func addPoints(pointsToAdd: Int){
+        points = points + pointsToAdd
+    }
     
     //Fill up the gamelist with the easy words, and reset points
     func setUpEasyGame(){
