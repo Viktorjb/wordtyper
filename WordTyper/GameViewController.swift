@@ -11,10 +11,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 
     let model = WordLists()
     var gameMode = Int()
+    var timeLeft : Int = 30
     
     @IBOutlet weak var gamePlayWordLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
-    
+    @IBOutlet weak var timeLabel: UILabel!
     
     @IBAction func gamePlayEnterText(_ sender: UITextField) {
         
@@ -56,6 +57,29 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
         gamePlayWordLabel.text = model.getTopWord()
         pointsLabel.text = "Points: " + String(model.getPoints())
+        
+        timeLabel.text = "Time left: " + String(timeLeft)
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.timeLeft = self.timeLeft - 1
+            self.timeLabel.text = "Time left: " + String(self.timeLeft)
+            
+            if(self.timeLeft < 0){
+                //end game show results
+            }
+            
+        }
+        
+        /*let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+        
+        
+            var body: some View {
+                Text("\(timeRemaining)")
+                    .onReceive(timer) { _ in
+                        if timeRemaining > 0 {
+                            timeRemaining -= 1
+                        }
+                    }*/
         
     }
     
