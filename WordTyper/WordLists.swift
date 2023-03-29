@@ -11,9 +11,24 @@ import Foundation
 class WordLists {
     
     //Word lists
-    private let easyList = ["crab", "cheese", "rocket", "hair"]
+    private let easyList = ["crab", "cheese", "rocket", "hair", "cat", "dog", "soup",
+    "rod", "bleak", "cough", "drink", "food", "style", "pick", "drool", "tough", "large",
+    "small", "broad", "toy", "hammer", "wall", "soft", "wares", "fast", "cruel", "hippo",
+    "land", "story", "legend", "rice", "screen", "phone", "false", "right", "happy",
+    "ear", "sea", "depth", "water", "vision", "hall", "street", "roof", "human",
+    "glare", "lid", "pan", "sword", "cow", "farm", "grass", "root", "know", "speed",
+    "fork", "radio", "valley", "bath", "glove", "steel", "iron", "money", "oil", "pasta",
+    "meter", "guest", "forget", "gone", "away"]
     private let hardList = ["shortcut", "preferences", "chocolate", "desktop", "cognitive",
-    "gargantuan", "explosion", "everlasting", "wallpaper", "mountain", "samurai"]
+    "gargantuan", "explosion", "everlasting", "wallpaper", "mountain", "samurai",
+    "stigma", "draconic", "propeller", "climbing", "tangible", "uncontrollable",
+    "truthful", "mouthful", "glorified", "ketchup", "daybreak", "storyboard",
+    "breakage", "structural", "falsehood", "exciting", "virtual", "otherworldly",
+    "illusion", "expansion", "dignified", "keyboard", "smartphone", "external",
+    "marvelous", "magnified", "downwards", "container"]
+    
+    //previously played game mode (o for easy 1 for hard)
+    private var lastGameMode : Int = 0
     
     //gameList, to be used when a game is active
     private var gameList : [String] = []
@@ -38,12 +53,14 @@ class WordLists {
     func setUpEasyGame(){
         points = 0
         gameList = easyList.shuffled()
+        lastGameMode = 0
     }
     
     //Fill up the gamelist with the hard words, and reset points
     func setUpHardGame(){
         points = 0
         gameList = hardList.shuffled()
+        lastGameMode = 1
     }
     
     //Add a character (or substring) to the current string, get the full string back

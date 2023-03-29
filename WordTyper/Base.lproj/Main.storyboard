@@ -11,7 +11,7 @@
         <!--Title View Controller-->
         <scene sceneID="cJI-x3-a8O">
             <objects>
-                <viewController id="4LW-ng-o2g" customClass="TitleViewController" customModule="WordTyper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="4LW-ng-o2g" customClass="TitleViewController" customModule="WordTyper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WRH-8Q-Bcn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,7 @@
                             <constraint firstItem="NdF-tj-ZRC" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="83" id="z37-4c-AbN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2d5-Dd-Cr1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oh7-Tj-lwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,9 +80,9 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="WordTyper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="GameViewController" customModule="WordTyper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bps-dh-cxg">
@@ -159,12 +160,12 @@
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="4eX-Qd-1a7">
             <objects>
-                <viewController id="ZuN-Ey-zSx" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZuN-Ey-zSx" customClass="ResultViewController" customModule="WordTyper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLu-KA-58p">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCt-J2-f7X">
@@ -191,19 +192,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-ae-InR">
+                                <rect key="frame" x="126" y="381" width="141" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="CZ5-iH-kHL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Again"/>
+                                <connections>
+                                    <segue destination="4LW-ng-o2g" kind="show" id="gTK-4o-abb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X9S-v0-2Zg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="X9S-v0-2Zg" firstAttribute="trailing" secondItem="FdU-ae-InR" secondAttribute="trailing" constant="126" id="CQ7-fM-4aQ"/>
                             <constraint firstItem="X9S-v0-2Zg" firstAttribute="trailing" secondItem="gNw-cS-mi9" secondAttribute="trailing" constant="93" id="DcQ-jO-gEW"/>
                             <constraint firstItem="aCt-J2-f7X" firstAttribute="leading" secondItem="X9S-v0-2Zg" secondAttribute="leading" constant="75" id="LVj-92-8hK"/>
                             <constraint firstItem="gNw-cS-mi9" firstAttribute="leading" secondItem="X9S-v0-2Zg" secondAttribute="leading" constant="92" id="Q2g-JY-lKn"/>
                             <constraint firstItem="aCt-J2-f7X" firstAttribute="top" secondItem="X9S-v0-2Zg" secondAttribute="top" constant="55" id="ZYG-MD-mNe"/>
+                            <constraint firstItem="FdU-ae-InR" firstAttribute="leading" secondItem="X9S-v0-2Zg" secondAttribute="leading" constant="126" id="hp7-rG-tgr"/>
                             <constraint firstItem="gNw-cS-mi9" firstAttribute="top" secondItem="aCt-J2-f7X" secondAttribute="bottom" constant="54" id="ohY-GH-h39"/>
+                            <constraint firstItem="FdU-ae-InR" firstAttribute="top" secondItem="gNw-cS-mi9" secondAttribute="bottom" constant="45" id="tT3-SY-H1u"/>
                             <constraint firstItem="X9S-v0-2Zg" firstAttribute="trailing" secondItem="aCt-J2-f7X" secondAttribute="trailing" constant="76" id="tju-at-qkL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Qf-xN-zCp"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="gNw-cS-mi9" id="TNB-YN-154"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcU-1E-75Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,7 +229,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XFL-lO-C6U"/>
+        <segue reference="glJ-VZ-keO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">

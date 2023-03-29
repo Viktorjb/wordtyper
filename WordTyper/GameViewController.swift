@@ -88,7 +88,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        if(segue.identifier == "gameClearSegue"){
+            let vc = segue.destination as! ResultViewController
+            vc.resultModel = model
+        }
     }
     
 }

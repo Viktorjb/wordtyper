@@ -9,9 +9,15 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var resultModel = WordLists()
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        scoreLabel.text = "You scored: " + String(resultModel.getPoints())
+        
         // Do any additional setup after loading the view.
     }
     
