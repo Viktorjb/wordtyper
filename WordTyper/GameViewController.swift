@@ -10,6 +10,7 @@ import UIKit
 class GameViewController: UIViewController, UITextFieldDelegate {
 
     let model = WordLists()
+    var gameMode = Int()
     
     @IBOutlet weak var gamePlayWordLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
@@ -48,7 +49,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        model.setUpHardGame()
+        if(gameMode == 0){
+            model.setUpEasyGame()
+        } else{
+            model.setUpHardGame()
+        }
         gamePlayWordLabel.text = model.getTopWord()
         pointsLabel.text = "Points: " + String(model.getPoints())
         
