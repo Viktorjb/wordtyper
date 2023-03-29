@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class GameViewController: UIViewController, UITextFieldDelegate {
 
     let model = WordLists()
     
