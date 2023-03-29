@@ -95,6 +95,9 @@ class WordLists {
         //run when either timer runs out or gameList gets empty
         //if points is higher than the record in userdefaults, set as new record
         //return stuff to let the view know to go to results page (and populate it?)
+        
+        currentString = ""
+        //record points to userdefaults
     }
 }
 

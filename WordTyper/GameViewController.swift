@@ -62,11 +62,15 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.timeLeft = self.timeLeft - 1
-            self.timeLabel.text = "Time left: " + String(self.timeLeft)
             
             if(self.timeLeft < 0){
                 //end game show results
+                timer.invalidate()
+                self.model.gameOver()
+                self.performSegue(withIdentifier: "gameClearSegue", sender: Any?.self)
             }
+            
+            self.timeLabel.text = "Time left: " + String(self.timeLeft)
             
         }
         
@@ -81,6 +85,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                         }
                     }*/
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
     }
     
 }
