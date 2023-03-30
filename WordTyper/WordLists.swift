@@ -25,7 +25,7 @@ class WordLists {
     "truthful", "mouthful", "glorified", "ketchup", "daybreak", "storyboard",
     "breakage", "structural", "falsehood", "exciting", "virtual", "otherworldly",
     "illusion", "expansion", "dignified", "keyboard", "smartphone", "external",
-    "marvelous", "magnified", "downwards", "container"]
+    "marvelous", "magnified", "downwards", "container", "gnarled", "mirrored"]
     
     //previously played game mode (o for easy 1 for hard)
     private var lastGameMode : Int = 0
