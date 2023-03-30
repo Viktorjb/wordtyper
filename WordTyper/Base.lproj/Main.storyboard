@@ -250,6 +250,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vZp-58-WQa"/>
                     <connections>
+                        <outlet property="gamePlayTextField" destination="MpK-YY-3V6" id="fvv-Dx-ki2"/>
                         <outlet property="gamePlayWordLabel" destination="Bps-dh-cxg" id="GHq-KP-FNk"/>
                         <outlet property="pointsLabel" destination="LN7-Dw-sN8" id="eu0-8P-ohT"/>
                         <outlet property="timeLabel" destination="muv-Fd-eio" id="1Mq-Uf-REA"/>

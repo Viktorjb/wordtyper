@@ -16,6 +16,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gamePlayWordLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var gamePlayTextField: UITextField!
     
     @IBAction func gamePlayEnterText(_ sender: UITextField) {
         
@@ -75,6 +76,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             self.timeLabel.text = "Time left: " + String(self.timeLeft)
             
         }
+        //focus on the textfield automatically
+        gamePlayTextField.becomeFirstResponder()
         
         
     }
