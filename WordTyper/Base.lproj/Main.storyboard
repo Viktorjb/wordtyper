@@ -66,34 +66,31 @@
                                     <segue destination="Tt8-om-xhZ" kind="show" id="V56-PN-ctR"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordTyperTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Cig-D1-tb0">
-                                <rect key="frame" x="76" y="116" width="240" height="140"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordTyperTitle" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-7h-VR7">
+                                <rect key="frame" x="44" y="95" width="305" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="3z1-M3-oUK"/>
+                                    <constraint firstAttribute="height" constant="170" id="eYC-Hs-Ait"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="was-Ft-xny"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0Cs-7h-VR7" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="44" id="0Nn-Z0-Zis"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="mGK-zr-Q0b" secondAttribute="trailing" constant="120" id="1lf-f0-ZtU"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="bottom" secondItem="3ZM-zu-kLa" secondAttribute="bottom" constant="63" id="2g5-sw-a5r"/>
                             <constraint firstItem="NdF-tj-ZRC" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="80" id="30g-xQ-jno"/>
-                            <constraint firstItem="Cig-D1-tb0" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="76" id="97w-dX-sHT"/>
+                            <constraint firstItem="0Cs-7h-VR7" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="36" id="5e3-R0-DEW"/>
+                            <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="0Cs-7h-VR7" secondAttribute="trailing" constant="44" id="CDK-y8-qyD"/>
                             <constraint firstItem="BxD-Sf-bdN" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="107" id="Cda-16-6bK"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="BxD-Sf-bdN" secondAttribute="trailing" constant="107" id="UtH-0j-Fkx"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="3ZM-zu-kLa" secondAttribute="trailing" constant="121" id="V8d-ag-1wP"/>
-                            <constraint firstItem="Cig-D1-tb0" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="57" id="XfA-Td-vwq"/>
                             <constraint firstItem="mGK-zr-Q0b" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="119" id="Z4t-Me-CYj"/>
-                            <constraint firstItem="Cig-D1-tb0" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="76" id="aIv-eH-vEp"/>
-                            <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="Cig-D1-tb0" secondAttribute="trailing" constant="77" id="aur-YY-Bec"/>
                             <constraint firstItem="3ZM-zu-kLa" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="121" id="eNn-es-hLQ"/>
-                            <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="Cig-D1-tb0" secondAttribute="trailing" constant="77" id="eos-Oc-B3b"/>
                             <constraint firstItem="mGK-zr-Q0b" firstAttribute="top" secondItem="NdF-tj-ZRC" secondAttribute="bottom" constant="170" id="g7y-xM-9vf"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="bottom" secondItem="mGK-zr-Q0b" secondAttribute="bottom" constant="357" id="nSj-QG-b6B"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="NdF-tj-ZRC" secondAttribute="trailing" constant="83" id="tLS-g4-3ka"/>
                             <constraint firstItem="BxD-Sf-bdN" firstAttribute="top" secondItem="mGK-zr-Q0b" secondAttribute="bottom" constant="26" id="uTp-vi-5RH"/>
-                            <constraint firstItem="Cig-D1-tb0" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="57" id="ygx-lj-wV4"/>
                             <constraint firstItem="NdF-tj-ZRC" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="83" id="z37-4c-AbN"/>
                         </constraints>
                     </view>
@@ -343,7 +340,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="glJ-VZ-keO"/>
-        <segue reference="gTK-4o-abb"/>
+        <segue reference="L7N-rH-4wO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="WordTyperTitle" width="963" height="586"/>
