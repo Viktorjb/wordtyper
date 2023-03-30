@@ -25,7 +25,7 @@
                                     <fragment content="Word Typer">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="36" name=".SFNS-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -66,6 +66,12 @@
                                     <segue destination="Tt8-om-xhZ" kind="show" id="V56-PN-ctR"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WordTyperTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Cig-D1-tb0">
+                                <rect key="frame" x="76" y="116" width="240" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3z1-M3-oUK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="was-Ft-xny"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,15 +79,21 @@
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="mGK-zr-Q0b" secondAttribute="trailing" constant="120" id="1lf-f0-ZtU"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="bottom" secondItem="3ZM-zu-kLa" secondAttribute="bottom" constant="63" id="2g5-sw-a5r"/>
                             <constraint firstItem="NdF-tj-ZRC" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="80" id="30g-xQ-jno"/>
+                            <constraint firstItem="Cig-D1-tb0" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="76" id="97w-dX-sHT"/>
                             <constraint firstItem="BxD-Sf-bdN" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="107" id="Cda-16-6bK"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="BxD-Sf-bdN" secondAttribute="trailing" constant="107" id="UtH-0j-Fkx"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="3ZM-zu-kLa" secondAttribute="trailing" constant="121" id="V8d-ag-1wP"/>
+                            <constraint firstItem="Cig-D1-tb0" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="57" id="XfA-Td-vwq"/>
                             <constraint firstItem="mGK-zr-Q0b" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="119" id="Z4t-Me-CYj"/>
+                            <constraint firstItem="Cig-D1-tb0" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="76" id="aIv-eH-vEp"/>
+                            <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="Cig-D1-tb0" secondAttribute="trailing" constant="77" id="aur-YY-Bec"/>
                             <constraint firstItem="3ZM-zu-kLa" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="121" id="eNn-es-hLQ"/>
+                            <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="Cig-D1-tb0" secondAttribute="trailing" constant="77" id="eos-Oc-B3b"/>
                             <constraint firstItem="mGK-zr-Q0b" firstAttribute="top" secondItem="NdF-tj-ZRC" secondAttribute="bottom" constant="170" id="g7y-xM-9vf"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="bottom" secondItem="mGK-zr-Q0b" secondAttribute="bottom" constant="357" id="nSj-QG-b6B"/>
                             <constraint firstItem="was-Ft-xny" firstAttribute="trailing" secondItem="NdF-tj-ZRC" secondAttribute="trailing" constant="83" id="tLS-g4-3ka"/>
                             <constraint firstItem="BxD-Sf-bdN" firstAttribute="top" secondItem="mGK-zr-Q0b" secondAttribute="bottom" constant="26" id="uTp-vi-5RH"/>
+                            <constraint firstItem="Cig-D1-tb0" firstAttribute="top" secondItem="was-Ft-xny" secondAttribute="top" constant="57" id="ygx-lj-wV4"/>
                             <constraint firstItem="NdF-tj-ZRC" firstAttribute="leading" secondItem="was-Ft-xny" secondAttribute="leading" constant="83" id="z37-4c-AbN"/>
                         </constraints>
                     </view>
@@ -277,7 +289,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Game over!">
                                         <attributes>
-                                            <font key="NSFont" size="36" name=".SFNS-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -331,9 +343,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="glJ-VZ-keO"/>
-        <segue reference="L7N-rH-4wO"/>
+        <segue reference="gTK-4o-abb"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="WordTyperTitle" width="963" height="586"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
