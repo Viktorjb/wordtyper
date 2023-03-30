@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="-1089.3129770992366" y="-237.32394366197184"/>
         </scene>
-        <!--View Controller-->
+        <!--Highscores View Controller-->
         <scene sceneID="1eZ-0M-H41">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Tt8-om-xhZ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Tt8-om-xhZ" customClass="HighscoresViewController" customModule="WordTyper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dl0-ic-U8T">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,15 +117,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-7A-G4g">
-                                <rect key="frame" x="115" y="388" width="163" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="54n-0G-h9P"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-37-NXa">
                                 <rect key="frame" x="108" y="219" width="177" height="54"/>
                                 <constraints>
@@ -135,6 +126,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-7A-G4g">
+                                <rect key="frame" x="115" y="388" width="163" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="54n-0G-h9P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9X-e1-1EE">
+                                <rect key="frame" x="73" y="602" width="246" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="tnF-vX-4qw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Return To Title"/>
+                                <connections>
+                                    <segue destination="4LW-ng-o2g" kind="show" id="L7N-rH-4wO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ycy-nH-Ca0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,10 +161,17 @@
                             <constraint firstItem="GMX-37-NXa" firstAttribute="leading" secondItem="ycy-nH-Ca0" secondAttribute="leading" constant="108" id="OxL-P5-UbL"/>
                             <constraint firstItem="x4V-kl-BDo" firstAttribute="top" secondItem="GMX-37-NXa" secondAttribute="bottom" constant="50" id="WwM-fc-HaQ"/>
                             <constraint firstItem="GMX-37-NXa" firstAttribute="top" secondItem="CXf-x9-GFz" secondAttribute="bottom" constant="1" id="dTz-IK-cEd"/>
+                            <constraint firstItem="K9X-e1-1EE" firstAttribute="leading" secondItem="ycy-nH-Ca0" secondAttribute="leading" constant="73" id="udf-uz-GFZ"/>
                             <constraint firstItem="ycy-nH-Ca0" firstAttribute="trailing" secondItem="x4V-kl-BDo" secondAttribute="trailing" constant="92" id="wQv-MB-kfg"/>
+                            <constraint firstItem="ycy-nH-Ca0" firstAttribute="bottom" secondItem="K9X-e1-1EE" secondAttribute="bottom" constant="136" id="ykj-ue-tQH"/>
+                            <constraint firstItem="ycy-nH-Ca0" firstAttribute="trailing" secondItem="K9X-e1-1EE" secondAttribute="trailing" constant="74" id="zgw-Eu-xUt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jfi-zz-Fev"/>
+                    <connections>
+                        <outlet property="easyScoreLabel" destination="GMX-37-NXa" id="qxg-op-PYX"/>
+                        <outlet property="hardScoreLabel" destination="Zmg-7A-G4g" id="8P3-SN-Rbl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvH-5N-Wxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -312,6 +330,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="glJ-VZ-keO"/>
+        <segue reference="L7N-rH-4wO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">

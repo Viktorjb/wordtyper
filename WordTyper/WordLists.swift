@@ -10,6 +10,11 @@ import Foundation
 //Model class containing word lists and logic surrounding it
 class WordLists {
     
+    //keys for saving highscores
+    let userDefaultsEasyKey = "easyHighScore"
+    let userDefualtsHardKey = "hardHighScore"
+    
+    
     //Word lists
     private let easyList = ["crab", "cheese", "rocket", "hair", "cat", "dog", "soup",
     "rod", "bleak", "cough", "drink", "food", "style", "pick", "drool", "tough", "large",
@@ -18,7 +23,7 @@ class WordLists {
     "ear", "sea", "depth", "water", "vision", "hall", "street", "roof", "human",
     "glare", "lid", "pan", "sword", "cow", "farm", "grass", "root", "know", "speed",
     "fork", "radio", "valley", "bath", "glove", "steel", "iron", "money", "oil", "pasta",
-    "meter", "guest", "forget", "gone", "away"]
+    "meter", "guest", "forget", "gone", "away", "acid", "fire", "battle", "thick", "thin"]
     private let hardList = ["shortcut", "preferences", "chocolate", "desktop", "cognitive",
     "gargantuan", "explosion", "everlasting", "wallpaper", "mountain", "samurai",
     "stigma", "draconic", "propeller", "climbing", "tangible", "uncontrollable",
@@ -114,7 +119,35 @@ class WordLists {
         //return stuff to let the view know to go to results page (and populate it?)
         
         currentString = ""
-        //record points to userdefaults
+        saveHighscore(score: points)
+    }
+    
+    func saveHighscore(score : Int){
+        let defaults = UserDefaults.standard
+        
+        var previousScore = 0
+        
+        if(lastGameMode == 0){
+            let savedScore = UserDefaults.standard.object(forKey: userDefaultsEasyKey) as? Int
+            if let fetchedScore = savedScore {
+                previousScore = fetchedScore
+            }
+        } else{
+            let savedScore = UserDefaults.standard.object(forKey: userDefualtsHardKey) as? Int
+            if let fetchedScore = savedScore {
+                previousScore = fetchedScore
+            }
+        }
+        
+        
+        if(lastGameMode == 0 && score > previousScore){
+            defaults.set(score, forKey: userDefaultsEasyKey)
+            defaults.synchronize()
+        } else if(lastGameMode == 1 && score > previousScore){
+            defaults.set(score, forKey: userDefualtsHardKey)
+            defaults.synchronize()
+        }
+        
     }
 }
 
