@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		773988CA29D1D928009370EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988C929D1D928009370EA /* AppDelegate.swift */; };
 		773988CC29D1D928009370EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988CB29D1D928009370EA /* SceneDelegate.swift */; };
-		773988CE29D1D928009370EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988CD29D1D928009370EA /* ViewController.swift */; };
+		773988CE29D1D928009370EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988CD29D1D928009370EA /* GameViewController.swift */; };
 		773988D129D1D928009370EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773988CF29D1D928009370EA /* Main.storyboard */; };
 		773988D329D1D92A009370EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 773988D229D1D92A009370EA /* Assets.xcassets */; };
 		773988D629D1D92A009370EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773988D429D1D92A009370EA /* LaunchScreen.storyboard */; };
@@ -17,6 +17,9 @@
 		773988EB29D1D92A009370EA /* WordTyperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988EA29D1D92A009370EA /* WordTyperUITests.swift */; };
 		773988ED29D1D92A009370EA /* WordTyperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988EC29D1D92A009370EA /* WordTyperUITestsLaunchTests.swift */; };
 		773988FA29D1DF52009370EA /* WordLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988F929D1DF52009370EA /* WordLists.swift */; };
+		773988FC29D49F85009370EA /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988FB29D49F84009370EA /* TitleViewController.swift */; };
+		773988FE29D4BD74009370EA /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988FD29D4BD74009370EA /* ResultViewController.swift */; };
+		7739890029D5C5E6009370EA /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773988FF29D5C5E6009370EA /* HighscoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		773988C629D1D928009370EA /* WordTyper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordTyper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		773988C929D1D928009370EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		773988CB29D1D928009370EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		773988CD29D1D928009370EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		773988CD29D1D928009370EA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		773988D029D1D928009370EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		773988D229D1D92A009370EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		773988D529D1D92A009370EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		773988EA29D1D92A009370EA /* WordTyperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTyperUITests.swift; sourceTree = "<group>"; };
 		773988EC29D1D92A009370EA /* WordTyperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTyperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		773988F929D1DF52009370EA /* WordLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordLists.swift; sourceTree = "<group>"; };
+		773988FB29D49F84009370EA /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		773988FD29D4BD74009370EA /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		773988FF29D5C5E6009370EA /* HighscoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,10 @@
 				773988F929D1DF52009370EA /* WordLists.swift */,
 				773988C929D1D928009370EA /* AppDelegate.swift */,
 				773988CB29D1D928009370EA /* SceneDelegate.swift */,
-				773988CD29D1D928009370EA /* ViewController.swift */,
+				773988CD29D1D928009370EA /* GameViewController.swift */,
+				773988FD29D4BD74009370EA /* ResultViewController.swift */,
+				773988FF29D5C5E6009370EA /* HighscoresViewController.swift */,
+				773988FB29D49F84009370EA /* TitleViewController.swift */,
 				773988CF29D1D928009370EA /* Main.storyboard */,
 				773988D229D1D92A009370EA /* Assets.xcassets */,
 				773988D429D1D92A009370EA /* LaunchScreen.storyboard */,
@@ -261,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				773988CE29D1D928009370EA /* ViewController.swift in Sources */,
+				773988FC29D49F85009370EA /* TitleViewController.swift in Sources */,
+				773988CE29D1D928009370EA /* GameViewController.swift in Sources */,
 				773988FA29D1DF52009370EA /* WordLists.swift in Sources */,
 				773988CA29D1D928009370EA /* AppDelegate.swift in Sources */,
+				7739890029D5C5E6009370EA /* HighscoresViewController.swift in Sources */,
 				773988CC29D1D928009370EA /* SceneDelegate.swift in Sources */,
+				773988FE29D4BD74009370EA /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

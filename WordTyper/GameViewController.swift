@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class GameViewController: UIViewController, UITextFieldDelegate {
 
     let model = WordLists()
+    var gameMode = Int()
+    var timeLeft : Int = 30
     
     @IBOutlet weak var gamePlayWordLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
-    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var gamePlayTextField: UITextField!
     
     @IBAction func gamePlayEnterText(_ sender: UITextField) {
         
@@ -21,7 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //Called whenever user changes anything in text field (i.e. on input)
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //print(textField.text)
         print(string)
         let fullString = model.typeCharacter(s: string)
         if(fullString == model.getTopWord()){ //If the word has been fully correctly typed
@@ -48,10 +50,44 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        model.setUpHardGame()
+        if(gameMode == 0){
+            model.setUpEasyGame()
+        } else{
+            model.setUpHardGame()
+        }
         gamePlayWordLabel.text = model.getTopWord()
         pointsLabel.text = "Points: " + String(model.getPoints())
         
+        timeLabel.text = "Time left: " + String(timeLeft)
+        
+        //set up timer
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            //subtract 1 from timeLeft every second
+            self.timeLeft = self.timeLeft - 1
+            
+            //if no time left
+            if(self.timeLeft < 0){
+                //end game show results
+                timer.invalidate() //stop timer
+                self.model.gameOver()
+                self.performSegue(withIdentifier: "gameClearSegue", sender: Any?.self)
+            }
+            
+            self.timeLabel.text = "Time left: " + String(self.timeLeft)
+            
+        }
+        //focus on the textfield automatically
+        gamePlayTextField.becomeFirstResponder()
+        
+        
+    }
+    
+    //sends the model with the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "gameClearSegue"){
+            let vc = segue.destination as! ResultViewController
+            vc.resultModel = model
+        }
     }
     
 }
