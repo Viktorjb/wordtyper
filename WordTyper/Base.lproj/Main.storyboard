@@ -100,22 +100,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore Easy Game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-x9-GFz">
-                                <rect key="frame" x="84" y="154" width="224" height="86"/>
+                                <rect key="frame" x="84" y="154" width="224" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="aEq-ag-AKf"/>
+                                    <constraint firstAttribute="height" constant="64" id="aEq-ag-AKf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Highscore Hard Game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4V-kl-BDo">
-                                <rect key="frame" x="92" y="335" width="209" height="64"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore Hard Game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4V-kl-BDo">
+                                <rect key="frame" x="92" y="323" width="209" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="kLa-E4-sza"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-7A-G4g">
-                                <rect key="frame" x="115" y="407" width="163" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-7A-G4g">
+                                <rect key="frame" x="115" y="388" width="163" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="54n-0G-h9P"/>
                                 </constraints>
@@ -124,9 +127,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-37-NXa">
-                                <rect key="frame" x="108" y="241" width="177" height="44"/>
+                                <rect key="frame" x="108" y="219" width="177" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="yfk-t1-uCM"/>
+                                    <constraint firstAttribute="height" constant="54" id="yfk-t1-uCM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -141,10 +144,13 @@
                             <constraint firstItem="CXf-x9-GFz" firstAttribute="top" secondItem="ycy-nH-Ca0" secondAttribute="top" constant="95" id="4tu-VX-EYO"/>
                             <constraint firstItem="Zmg-7A-G4g" firstAttribute="top" secondItem="x4V-kl-BDo" secondAttribute="bottom" constant="1" id="8eh-zR-GPO"/>
                             <constraint firstItem="ycy-nH-Ca0" firstAttribute="trailing" secondItem="GMX-37-NXa" secondAttribute="trailing" constant="108" id="GTU-0A-Bjq"/>
+                            <constraint firstItem="x4V-kl-BDo" firstAttribute="leading" secondItem="ycy-nH-Ca0" secondAttribute="leading" constant="92" id="JCH-cR-0aH"/>
                             <constraint firstItem="ycy-nH-Ca0" firstAttribute="trailing" secondItem="Zmg-7A-G4g" secondAttribute="trailing" constant="115" id="Jji-SJ-ffQ"/>
                             <constraint firstItem="Zmg-7A-G4g" firstAttribute="leading" secondItem="ycy-nH-Ca0" secondAttribute="leading" constant="115" id="LzJ-KA-gsh"/>
                             <constraint firstItem="GMX-37-NXa" firstAttribute="leading" secondItem="ycy-nH-Ca0" secondAttribute="leading" constant="108" id="OxL-P5-UbL"/>
+                            <constraint firstItem="x4V-kl-BDo" firstAttribute="top" secondItem="GMX-37-NXa" secondAttribute="bottom" constant="50" id="WwM-fc-HaQ"/>
                             <constraint firstItem="GMX-37-NXa" firstAttribute="top" secondItem="CXf-x9-GFz" secondAttribute="bottom" constant="1" id="dTz-IK-cEd"/>
+                            <constraint firstItem="ycy-nH-Ca0" firstAttribute="trailing" secondItem="x4V-kl-BDo" secondAttribute="trailing" constant="92" id="wQv-MB-kfg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jfi-zz-Fev"/>
