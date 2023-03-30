@@ -16,6 +16,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //display points
         scoreLabel.text = "You scored: " + String(resultModel.getPoints())
         
         // Do any additional setup after loading the view.

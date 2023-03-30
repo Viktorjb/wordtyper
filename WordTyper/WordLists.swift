@@ -113,20 +113,19 @@ class WordLists {
         return gameList.isEmpty
     }
     
+    //reset currentstring and save highscore
     func gameOver(){
-        //run when either timer runs out or gameList gets empty
-        //if points is higher than the record in userdefaults, set as new record
-        //return stuff to let the view know to go to results page (and populate it?)
-        
         currentString = ""
         saveHighscore(score: points)
     }
     
+    //saves highscore to userdefaults (if higher than before)
     func saveHighscore(score : Int){
         let defaults = UserDefaults.standard
         
         var previousScore = 0
         
+        //try to fetch previous highscore
         if(lastGameMode == 0){
             let savedScore = UserDefaults.standard.object(forKey: userDefaultsEasyKey) as? Int
             if let fetchedScore = savedScore {
@@ -139,7 +138,7 @@ class WordLists {
             }
         }
         
-        
+        //save highscore if higher than before
         if(lastGameMode == 0 && score > previousScore){
             defaults.set(score, forKey: userDefaultsEasyKey)
             defaults.synchronize()
@@ -147,7 +146,6 @@ class WordLists {
             defaults.set(score, forKey: userDefualtsHardKey)
             defaults.synchronize()
         }
-        
     }
 }
 

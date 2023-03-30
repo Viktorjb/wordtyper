@@ -18,6 +18,7 @@ class HighscoresViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        //try to read highscores
         let hiscoreEasy = UserDefaults.standard.object(forKey: "easyHighScore") as? Int
         let hiscoreHard = UserDefaults.standard.object(forKey: "hardHighScore") as? Int
         

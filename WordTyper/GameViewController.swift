@@ -23,7 +23,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     //Called whenever user changes anything in text field (i.e. on input)
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //print(textField.text)
         print(string)
         let fullString = model.typeCharacter(s: string)
         if(fullString == model.getTopWord()){ //If the word has been fully correctly typed
@@ -60,12 +59,15 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         timeLabel.text = "Time left: " + String(timeLeft)
         
+        //set up timer
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            //subtract 1 from timeLeft every second
             self.timeLeft = self.timeLeft - 1
             
+            //if no time left
             if(self.timeLeft < 0){
                 //end game show results
-                timer.invalidate()
+                timer.invalidate() //stop timer
                 self.model.gameOver()
                 self.performSegue(withIdentifier: "gameClearSegue", sender: Any?.self)
             }
@@ -74,19 +76,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             
         }
         
-        /*let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-        
-        
-            var body: some View {
-                Text("\(timeRemaining)")
-                    .onReceive(timer) { _ in
-                        if timeRemaining > 0 {
-                            timeRemaining -= 1
-                        }
-                    }*/
         
     }
     
+    //sends the model with the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "gameClearSegue"){
             let vc = segue.destination as! ResultViewController
